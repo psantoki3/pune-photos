@@ -18,7 +18,7 @@ public class ViewImages extends HttpServlet {
 		Map<String,Integer> imageMap = new HashMap<String, Integer>();
 		
 		int i = 0;
-		for (File f: new File(request.getServletContext().getRealPath("/")+ "static/images").listFiles()) {
+		for (File f: new File(request.getServletContext().getRealPath("/")+ "/uploadedImages").listFiles()) {
 			String imageName = f.getName();
 			imageMap.put(imageName, ++i);
 		}
