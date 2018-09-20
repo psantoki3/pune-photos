@@ -40,7 +40,9 @@ public class FileUpload extends HttpServlet {
 		
     	} catch (Exception e) {
 			out.println(e);
-		out.print(e.printStackTrace());
+			e.printStackTrace();
+			out.println(e.toString());
+			
 		}
 	}
 
