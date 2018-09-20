@@ -29,8 +29,11 @@ public class FileUpload extends HttpServlet {
 //			System.out.println("request.getContextPath()-"+request.getContextPath());
 //			System.out.println(request.getServletContext().getRealPath("/")+ "images");
 			
+			File path = new File(request.getServletContext().getRealPath("/")+"/uploadedImages");
+			
 			for (FileItem item : files) {
-				item.write(new File(request.getServletContext().getRealPath("/")+"static/images"+File.separator+item.getName()));
+				if(!path.exists()) {path.mkdirs();}
+				item.write(new File(path+File.separator+item.getName()));
 				//item.write(new File("/java/workspace/UploadedImages"+File.separator+item.getName()));
 			}
 			
