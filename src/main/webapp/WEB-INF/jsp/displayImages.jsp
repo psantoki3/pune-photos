@@ -27,7 +27,7 @@
 		//pageContext.setAttribute("imagePageContext", imageMap);
 	%>
 	<input type="checkbox" name="imageDownload" value="<%=imageName%>" >
-	<img src="<%=request.getContextPath()+File.separator+"static"+File.separator+"images"+File.separator+imageName%>" height=100  width=100>
+	<img src="<%=request.getContextPath()+File.separator+"uploadedImages"+File.separator+imageName%>" height=100  width=100>
 	
 	<%
 		}
