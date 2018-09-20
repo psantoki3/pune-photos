@@ -30,7 +30,7 @@ public class FileUpload extends HttpServlet {
 //			System.out.println(request.getServletContext().getRealPath("/")+ "images");
 			
 			for (FileItem item : files) {
-				item.write(new File(request.getContextPath()+File.separator+"static/images"+File.separator+item.getName()));
+				item.write(new File(request.getServletContext().getRealPath("/")+"static/images"+File.separator+item.getName()));
 				//item.write(new File("/java/workspace/UploadedImages"+File.separator+item.getName()));
 			}
 			
@@ -40,7 +40,7 @@ public class FileUpload extends HttpServlet {
 		
     	} catch (Exception e) {
 			out.println(e);
-		e.printStackTrace();
+		out.print(e.printStackTrace());
 		}
 	}
 
