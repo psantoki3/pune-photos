@@ -32,7 +32,7 @@ public class DownloadZipFile extends HttpServlet {
 		
 		for (String fileName : downloadFile) {
 			
-			File file = new File(request.getServletContext().getRealPath("/")+ "static/images"+File.separator+fileName);
+			File file = new File(request.getServletContext().getRealPath("/")+ "/uploadedImages"+File.separator+fileName);
 			fileList.add(file);
 		}
 		
